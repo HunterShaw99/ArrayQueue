@@ -1,2 +1,2 @@
-# ArrayQueue
- Simplified ArrayQueue ADT
+# Array Queue
+ Simplified Array Queue ADT
