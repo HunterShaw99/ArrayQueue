@@ -8,7 +8,7 @@
  * ***********************************************
  *
  * @author Stephen J. Sarma-Weierman
- * @author YOUR NAME HERE
+ * @author Hunter M. Shaw
  * @version 1.0
  */
 public interface Queue<T> {

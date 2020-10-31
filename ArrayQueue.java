@@ -82,8 +82,7 @@ public class ArrayQueue<T> implements Queue<T> {
 
     @Override
     public int size() {
-        // TODO Auto-generated method stub
-        return 0;
+        return size;
     }
 
     @Override
@@ -94,8 +93,7 @@ public class ArrayQueue<T> implements Queue<T> {
 
     @Override
     public boolean isEmpty() {
-        // TODO Auto-generated method stub
-        return false;
+        return size == 0;
     }
 
     private void resizeArray(int newCapacity) {
