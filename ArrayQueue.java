@@ -13,9 +13,9 @@ public class ArrayQueue<T> implements Queue<T> {
         this(DEFAULT_CAPACITY);
     }
 
-    public ArrayQueue(int initialCapacity) {
-        arrayCapacity = initialCapacity;
-        queue = new Object[initialCapacity];
+    public ArrayQueue(int arrayCapacity) {
+        this.arrayCapacity = arrayCapacity;
+        queue = new Object[arrayCapacity];
     }
 
     @Override
@@ -87,8 +87,8 @@ public class ArrayQueue<T> implements Queue<T> {
 
     @Override
     public void clear() {
-        // TODO Auto-generated method stub
-
+        size = 0;
+        queue = new Object[arrayCapacity];
     }
 
     @Override
