@@ -37,7 +37,8 @@ public class ArrayQueue<T> implements Queue<T> {
             return false;
         }
     }
-
+    
+    @SuppressWarnings("unchecked")
     @Override
     public T remove() {
         if (size == 0) {
@@ -114,7 +115,8 @@ public class ArrayQueue<T> implements Queue<T> {
 
     @Override
     public Object[] toArray() {
-      return null;
+      Object [] arr = new Object[size];
+      for (int i = front; i < size;)
     }
 
     @SuppressWarnings("unchecked")

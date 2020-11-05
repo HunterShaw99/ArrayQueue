@@ -22,7 +22,10 @@ public class ArrayQueueDriver {
     System.out.println("Size of numbers: "+numbers.size()+" Should be 4");
     System.out.println("Check if numbers is empty: "+numbers.isEmpty()+" Should be false");
     numbers.clear();
+    System.out.println("Size of numbers: "+numbers.size()+" Should be 0");
     System.out.println("Check if numbers is empty: "+numbers.isEmpty()+" Should be true");
+    System.out.println("Attempting to remove from empty queue: " + numbers.remove()+" should get Exception");
+    
 
   }
 }
