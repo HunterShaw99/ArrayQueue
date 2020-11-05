@@ -2,12 +2,12 @@ import java.util.Arrays;
 import java.util.NoSuchElementException;
 
 public class ArrayQueue<T> implements Queue<T> {
-    private Object [] queue;
-    private int size;
-    private int front;
-    private int back;
-    private int arrayCapacity;
-    public static final int DEFAULT_CAPACITY = 25;
+  private Object [] queue;
+  private int size;
+  private int front;
+  private int back;
+  private int arrayCapacity;
+  public static final int DEFAULT_CAPACITY = 25;
 
     public ArrayQueue() {
         this(DEFAULT_CAPACITY);
@@ -43,8 +43,10 @@ public class ArrayQueue<T> implements Queue<T> {
         if (size == 0) {
             throw new NoSuchElementException("Empty queue");
         }
-        // TODO Auto-generated method stub
-        return null;
+        Object o = queue[front];
+        front = (front + 1)%arrayCapacity;
+        size--;
+        return (T);
     }
 
     @Override
@@ -112,8 +114,7 @@ public class ArrayQueue<T> implements Queue<T> {
 
     @Override
     public Object[] toArray() {
-        // TODO Auto-generated method stub
-        return null;
+      return null;
     }
 
     @SuppressWarnings("unchecked")
