@@ -46,7 +46,7 @@ public class ArrayQueue<T> implements Queue<T> {
         Object o = queue[front];
         front = (front + 1)%arrayCapacity;
         size--;
-        return (T);
+        return (T)o;
     }
 
     @Override
