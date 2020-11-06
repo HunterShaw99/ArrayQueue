@@ -37,7 +37,7 @@ public class ArrayQueue<T> implements Queue<T> {
             return false;
         }
     }
-    
+
     @SuppressWarnings("unchecked")
     @Override
     public T remove() {
@@ -91,6 +91,8 @@ public class ArrayQueue<T> implements Queue<T> {
     @Override
     public void clear() {
         size = 0;
+        front = 0;
+        back = 0;
         queue = new Object[arrayCapacity];
     }
 
@@ -116,7 +118,14 @@ public class ArrayQueue<T> implements Queue<T> {
     @Override
     public Object[] toArray() {
       Object [] arr = new Object[size];
-      for (int i = front; i < size;)
+      int index = front;
+      int i = 0;
+      while (index != back) {
+          arr[i] = queue[index];
+          i++;
+          index = (index + 1)%arrayCapacity;
+      }
+      return arr;
     }
 
     @SuppressWarnings("unchecked")
