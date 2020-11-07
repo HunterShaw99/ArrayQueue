@@ -78,7 +78,7 @@ public class ArrayQueue<T> implements Queue<T> {
     }
 
     @Override
-    public boolean contains(T obj) {
+    public boolean contains(Object obj) {
       boolean found = false;
       int index = 0;
       if (isEmpty()) {

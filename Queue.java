@@ -52,9 +52,13 @@ public interface Queue<T> {
 	public T peek();
 
 	/**
-	 *
+	 * Searches collection specified element. Returns true
+	 only if Objects.equals(o, T)
+	 * @param obj - element to search for within the collection.
+	 * @return true if obj is found
+	 * @return false if obj is not found
 	 */
-	public boolean contains(T obj);
+	public boolean contains(Object o);
 
 	/**
 	 * @returns size.
