@@ -18,6 +18,7 @@ public class ArrayQueueDriver {
     System.out.println("Size of numbers: "+numbers.size()+" Should be 3.");
     System.out.println("Attempting to add 87: "+numbers.offer(87)+" Should be true.");
     System.out.println("Attempting to add 64: "+numbers.add(64)+" Should be true.");
+    System.out.println("Searching queue for 64 "+numbers.contains(64)+" Should be true.");
     System.out.println("Printing out values in queue:");
     for (Object y : numbers.toArray()) {
       System.out.print(y+" ");

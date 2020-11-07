@@ -1,5 +1,9 @@
 import java.util.Arrays;
 import java.util.NoSuchElementException;
+/**
+ * Simplified ArrayQueue data structure which implements Queue<T>
+ * @author Hunter M. Shaw
+ */
 
 public class ArrayQueue<T> implements Queue<T> {
   private Object [] queue;
@@ -84,7 +88,7 @@ public class ArrayQueue<T> implements Queue<T> {
       if (isEmpty()) {
         return found;
       }
-      while (index < size && !found) {
+      while (index <= size && !found) {
           if (queue[index].equals(obj)) {
             found = true;
           }
