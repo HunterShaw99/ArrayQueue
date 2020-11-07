@@ -62,7 +62,7 @@ public class ArrayQueue<T> implements Queue<T> {
     @SuppressWarnings("unchecked")
     @Override
     public T element() {
-        if (size == 0) {
+        if (isEmpty()) {
             throw new NoSuchElementException("Empty queue");
         }
         return (T)queue[front];
@@ -79,8 +79,18 @@ public class ArrayQueue<T> implements Queue<T> {
 
     @Override
     public boolean contains(T obj) {
-        // TODO Auto-generated method stub
-        return false;
+      boolean found = false;
+      int index = 0;
+      if (isEmpty()) {
+        return found;
+      }
+      while (index < size && !found) {
+          if (queue[index].equals(obj)) {
+            found = true;
+          }
+          index++;
+      }
+      return found;
     }
 
     @Override
