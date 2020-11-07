@@ -34,7 +34,7 @@ public class ArrayQueueDriver {
     }
     System.out.println("Size of numbers: "+numbers.size()+" Should be 15.");
     System.out.println("Attempting to remove front of queue: " + numbers.remove()+" should be 1.");
-    System.out.println("Attempting to look at Front of Queue: "+numbers.element()+" Should be 2.");
+    System.out.println("Attempting to look at Front of Queue: "+numbers.peek()+" Should be 2.");
     System.out.println("Attempting to remove front of queue: " + numbers.poll()+" should be 2.");
     for (Object k : numbers.toArray()) {
       System.out.print(k+" ");
