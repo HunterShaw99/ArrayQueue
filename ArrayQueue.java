@@ -1,5 +1,6 @@
 import java.util.Arrays;
 import java.util.NoSuchElementException;
+import java.lang.NullPointerException;
 /**
  * Simplified ArrayQueue data structure which implements Queue<T>
  * @author Hunter M. Shaw
@@ -27,10 +28,15 @@ public class ArrayQueue<T> implements Queue<T> {
         if (size == arrayCapacity-1) {
             resizeArray(arrayCapacity*2);
         }
-        queue[back] = obj;
-        back = (back + 1)%arrayCapacity;
-        size++;
-        return true;
+        try {
+          queue[back] = obj;
+          back = (back + 1)%arrayCapacity;
+          size++;
+          return true;
+        } catch (NullPointerException e) {
+            return false;
+         }
+
     }
 
     @Override

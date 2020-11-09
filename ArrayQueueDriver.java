@@ -7,7 +7,7 @@
 public class ArrayQueueDriver {
 
   public static void main (String[] args) {
-    ArrayQueue<Integer> numbers = new ArrayQueue<>();
+    ArrayQueue<Integer> numbers = new ArrayQueue<Integer>();
     System.out.println("Attempting to add 7: "+numbers.add(7)+" Should be true.");
     System.out.println("Attempting to add 8: "+numbers.add(8)+" Should be true.");
     System.out.println("Attempting to add 24: "+numbers.add(24)+" Should be true.");
