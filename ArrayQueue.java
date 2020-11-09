@@ -28,17 +28,11 @@ public class ArrayQueue<T> implements Queue<T> {
         if (size == arrayCapacity-1) {
             resizeArray(arrayCapacity*2);
         }
-        try {
           queue[back] = obj;
           back = (back + 1)%arrayCapacity;
           size++;
           return true;
-        } catch (NullPointerException e) {
-            return false;
-         }
-
     }
-
     @Override
     public boolean offer(T obj) {
         try {
