@@ -1,5 +1,5 @@
 # Array Queue
- Simplified Array Queue ADT
+ Array Queue ADT implementation assignment for CS 0455 SEC4005 ALGRTHMS & INFO STRUCTURES
 # What I learned
 - Creating Java Docs
 - Queue data structure
